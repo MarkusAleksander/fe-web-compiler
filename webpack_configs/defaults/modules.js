@@ -6,6 +6,11 @@ const json5 = require('json5');
 
 // *** MODULES ***//
 
+const HTML_module = {
+    test: /\.html$/i,
+    loader: 'html-loader',
+};
+
 // * JS
 const JS_module = {
     test: /\.(js)$/,
@@ -80,6 +85,7 @@ const JSON5_module = {
 // * module config
 const modules_config = {
     rules: [
+        HTML_module,
         JS_module,
         TS_module,
         image_module,
